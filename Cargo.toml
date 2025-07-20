@@ -1,0 +1,10 @@
+[workspace]
+members = ["workers/*"]
+resolver = "3"
+
+# Smallest binary possible with compiler options
+[profile.release]
+opt-level = "s"
+strip = true
+lto = true
+codegen-units = 1
